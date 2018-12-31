@@ -7,6 +7,10 @@ import { ChildcomponentComponent } from './parentcomponent/childcomponent/childc
 import { FormcomponentComponent } from './formcomponent/formcomponent.component';
 import { PopupmodalComponent } from './popupmodal/popupmodal.component';
 import { RoutenotfoundComponent } from './routenotfound/routenotfound.component';
+import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
+import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
+import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
 import {AuthGuard} from './auth-guard.service';
 
 export const appRoutes:Routes=[
@@ -26,6 +30,10 @@ children:[
 },
 {path:'form',component:FormcomponentComponent},
 {path:'popup',component:PopupmodalComponent},
+{path:'readfromfile',component:ReadfromfileComponent},
+{path:'fileupload',component:FileuploadComponent},
+{path:'routecomponent',component:RoutingcomponentComponent},
+{path:'routeparametercomponent/:id',component:RoutingparametercomponentComponent},
 {path:'**',component:RoutenotfoundComponent}
 
 ];

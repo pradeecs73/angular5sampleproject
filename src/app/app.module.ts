@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,APP_INITIALIZER} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/Http';
+import {HttpClientModule} from '@angular/common/http';
 import {appRoutes} from './routeconfigs'
 
 
@@ -18,6 +20,10 @@ import { ChildcomponentComponent } from './parentcomponent/childcomponent/childc
 import { FormcomponentComponent } from './formcomponent/formcomponent.component';
 import { PopupmodalComponent } from './popupmodal/popupmodal.component';
 import { RoutenotfoundComponent } from './routenotfound/routenotfound.component';
+import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
+import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
+import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
 
 
 export function init_app(configservice:configservice){
@@ -36,11 +42,17 @@ export function init_app(configservice:configservice){
     ChildcomponentComponent,
     FormcomponentComponent,
     PopupmodalComponent,
-    RoutenotfoundComponent
+    RoutenotfoundComponent,
+    ReadfromfileComponent,
+    FileuploadComponent,
+    RoutingcomponentComponent,
+    RoutingparametercomponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard],
