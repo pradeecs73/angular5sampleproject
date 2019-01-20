@@ -35,7 +35,7 @@ export class RoutingparametercomponentComponent implements OnInit {
 
   navigate(routeid:string)
   {
-    this.router.navigate(['/routeparametercomponent',routeid,{queryParams:{allowedit:routeid},relativeTo:this.route}]);
+    this.router.navigate(['/routeparametercomponent',routeid],{queryParams:{allowedit:routeid},relativeTo:this.route});
   }
 
 }

@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import {configservice} from './config.service';
 import {AuthGuard} from './auth-guard.service';
 import {AuthService} from './auth.service';
+import {observableservice} from './observable.service';
 import {ShortenPipe} from './shorten.pipe';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -24,6 +25,9 @@ import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
+import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
+import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
+import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
 
 
 export function init_app(configservice:configservice){
@@ -46,7 +50,10 @@ export function init_app(configservice:configservice){
     ReadfromfileComponent,
     FileuploadComponent,
     RoutingcomponentComponent,
-    RoutingparametercomponentComponent
+    RoutingparametercomponentComponent,
+    SimpleobservableComponent,
+    ObservablemethodsComponent,
+    CommoncomponentComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +62,7 @@ export function init_app(configservice:configservice){
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard],
+  providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard,observableservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

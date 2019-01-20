@@ -11,13 +11,17 @@ import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
+import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
+import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import {AuthGuard} from './auth-guard.service';
+
 
 export const appRoutes:Routes=[
 
 {path:'',redirectTo:'/login',pathMatch:'full'},
 {path:'login',component:LoginComponent},
-{path:'dashboard',component:DashboardComponent,
+{path:'dashboard',
+component:DashboardComponent,
 canActivate:[AuthGuard],
 canActivateChild:[AuthGuard],
 children:[
@@ -34,6 +38,8 @@ children:[
 {path:'fileupload',component:FileuploadComponent},
 {path:'routecomponent',component:RoutingcomponentComponent},
 {path:'routeparametercomponent/:id',component:RoutingparametercomponentComponent},
+{path:'simpleobservable',component:SimpleobservableComponent},
+{path:'observablemethod',component:ObservablemethodsComponent},
 {path:'**',component:RoutenotfoundComponent}
 
 ];

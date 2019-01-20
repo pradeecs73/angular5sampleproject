@@ -13,6 +13,26 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*saveUsers(){
+    this.prospectsservice.saveUsersList({}) 
+    .subscribe((response)=>{console.log(response)},
+    (error)=>{console.log(error)}
+    );
+  }*/
+
+  /*this.prospectsservice.getAllUsers() 
+    .subscribe((alluserlist:any)=>
+    {
+       this.alluserlist=alluserlist;
+    },
+    (error)=>{console.log(error)}
+    );*/
+
+    /*this.prospectsservice.deletedocument({}) 
+    .subscribe((response)=>{console.log(response)},
+    (error)=>{console.log(error)}
+    );*/
+
   logout(){
     localStorage.setItem("loggedIn","0");
     this.router.navigate(['/login']);

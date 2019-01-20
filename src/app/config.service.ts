@@ -38,4 +38,24 @@ export class configservice{
     {
       return "sampledata";
     }*/
+
+    /*saveUsersList(saveRequestUsers:any)
+    {
+       return this.http.post(this.urlobjectfromfile.saveuserlist,saveRequestUsers);
+    }*/
+
+    /*getAllUsers(){
+        return this.http.get(this.urlobjectfromfile.getallusers)
+        .map(
+           (response:Response)=>{
+              const alluserlist=response.json();
+              return alluserlist;
+           }
+        );
+    }*/
+
+   /*deletedocument(deletedocumentobject){
+      return this.http.put(this.urlobjectfromfile.deletedocument,deletedocumentobject);
+   }*/
+
 }
