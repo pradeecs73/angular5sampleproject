@@ -13,6 +13,7 @@ import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.c
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
 import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
+import { LocalreferenceComponent } from './localreference/localreference.component';
 import {AuthGuard} from './auth-guard.service';
 
 
@@ -40,6 +41,7 @@ children:[
 {path:'routeparametercomponent/:id',component:RoutingparametercomponentComponent},
 {path:'simpleobservable',component:SimpleobservableComponent},
 {path:'observablemethod',component:ObservablemethodsComponent},
+{path:'localreference',component:LocalreferenceComponent},
 {path:'**',component:RoutenotfoundComponent}
 
 ];

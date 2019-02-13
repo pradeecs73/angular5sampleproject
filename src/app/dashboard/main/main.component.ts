@@ -8,9 +8,13 @@ import {Router} from '@angular/router';
 })
 export class MainComponent implements OnInit {
   user:any=[{"name":"pradeep"},{"name":"prasad"},{"name":"suresh"},{"name":"ramesh"}];
+  someArray:any=[1,2,3,4,5];
   constructor(private router:Router) { }
 
   ngOnInit() {
+    this.someArray.forEach((item,index)=>{
+        console.log(item);
+    });
   }
 
   /*saveUsers(){

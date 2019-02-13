@@ -28,6 +28,7 @@ import { RoutingparametercomponentComponent } from './routingparametercomponent/
 import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
+import { LocalreferenceComponent } from './localreference/localreference.component';
 
 
 export function init_app(configservice:configservice){
@@ -53,7 +54,8 @@ export function init_app(configservice:configservice){
     RoutingparametercomponentComponent,
     SimpleobservableComponent,
     ObservablemethodsComponent,
-    CommoncomponentComponent
+    CommoncomponentComponent,
+    LocalreferenceComponent
   ],
   imports: [
     BrowserModule,
