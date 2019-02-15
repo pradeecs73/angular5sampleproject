@@ -13,11 +13,12 @@ let fileobjectcopyinstance:any;
   styleUrls: ['./fileupload.component.css']
 })
 export class FileuploadComponent implements OnInit {
-  fileobjectcopyinstance=this;
   selectedFiles:File[];
   uploadRequest:any={};
 
-  constructor() { } //For file upload http is HttpClient
+  constructor() { 
+    fileobjectcopyinstance=this;
+  } //For file upload http is HttpClient
 
   ngOnInit() {
 

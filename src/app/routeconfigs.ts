@@ -1,4 +1,6 @@
 import {Routes} from '@angular/router';
+import { NgModule,APP_INITIALIZER} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './dashboard/main/main.component';
@@ -17,7 +19,7 @@ import { LocalreferenceComponent } from './localreference/localreference.compone
 import {AuthGuard} from './auth-guard.service';
 
 
-export const appRoutes:Routes=[
+ const appRoutes:Routes=[
 
 {path:'',redirectTo:'/login',pathMatch:'full'},
 {path:'login',component:LoginComponent},
@@ -45,3 +47,14 @@ children:[
 {path:'**',component:RoutenotfoundComponent}
 
 ];
+
+@NgModule({
+  
+  imports: [
+   RouterModule.forRoot(appRoutes)
+  ],
+  exports:[RouterModule]
+ 
+})
+
+export class RouteConfigModule{}

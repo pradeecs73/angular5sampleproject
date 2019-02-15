@@ -4,7 +4,7 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/Http';
 import {HttpClientModule} from '@angular/common/http';
-import {appRoutes} from './routeconfigs'
+import {RouteConfigModule} from './routeconfigs'
 
 
 import { AppComponent } from './app.component';
@@ -62,7 +62,7 @@ export function init_app(configservice:configservice){
     FormsModule,
     HttpModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouteConfigModule
   ],
   providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard,observableservice],
   bootstrap: [AppComponent]
